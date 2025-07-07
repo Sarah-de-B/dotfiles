@@ -59,3 +59,6 @@
 
 [init]
   defaultBranch = master
+[user]
+	email = sarah.debellaistre@audencia.com
+	name = sarah crosnier de bellaistre
