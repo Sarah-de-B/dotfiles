@@ -27,7 +27,8 @@
   remoteSetHead = remote set-head origin --auto
 
   # Get default branch name (copied from https://stackoverflow.com/a/67672350/14870317)
-  defaultBranch = !git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4
+  # defaultBranch = !git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4
+  defaultBranch = !git symbolic-ref HEAD | cut -d'/' -f3
 
   # Clean merged branches (adapted from https://stackoverflow.com/a/6127884/14870317)
   sweep = !git branch --merged $(git defaultBranch) | grep -E -v " $(git defaultBranch)$" | xargs -r git branch -d && git remote prune origin
