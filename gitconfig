@@ -61,5 +61,5 @@
 [init]
   defaultBranch = master
 [user]
-	email = sarahdebellaistre@gmail.com
+	email = gh api user | jq -r '\"(.id)+(.login)@users.noreply.github.com\"'
 	name = Sarah de Bellaistre
